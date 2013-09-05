@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <div>
+        <ul id="output"></ul><br/>
+        <input type="text" id="input" /><input type="button" id="sendButton" value="Send"/>
+    </div>
+    <script src="~/Scripts/jquery-2.0.3.min.js"></script>
+    <script src="~/Scripts/jquery.signalR-2.0.0-rc1.min.js"></script>
+    <script src="~/signalr/hubs"></script>
+    <script>
+        $(function () {
+            // zet de verbinding op met de chatHub op de server
+            var chat = $.connection.chatHub;
+            
+            // methode voor de server om nieuw binnengekomen berichten te melden.
+            chat.client.messageIsReceived = function (message) {
+                $('#output').append('<li>' + message + '</li>');
+            };
+            
+            // de connectie opstarten
+            $.connection.hub.start().done(function () {
+                $('#sendButton').click(function () {
+                    var inputElement = $('#input');
+                    // Stuur het nieuwe bericht naar de server. 
+                    chat.server.newMessage(inputElement.val());
+                    // maak de input weer leeg 
+                    inputElement.val('');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

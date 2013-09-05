@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRDemo", "SignalRDemo\SignalRDemo.csproj", "{2175225E-AA0E-40B4-95DC-7882C70FC2E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2175225E-AA0E-40B4-95DC-7882C70FC2E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2175225E-AA0E-40B4-95DC-7882C70FC2E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2175225E-AA0E-40B4-95DC-7882C70FC2E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2175225E-AA0E-40B4-95DC-7882C70FC2E2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
