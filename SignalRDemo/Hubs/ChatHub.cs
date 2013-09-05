@@ -10,6 +10,12 @@ namespace SignalRDemo.Hubs
           return base.OnConnected();
         }
 
+        public override System.Threading.Tasks.Task OnDisconnected()
+        {
+            Clients.Others.MessageIsReceived("Client with ID" + Context.ConnectionId + " left the chat");
+            return base.OnDisconnected();
+        }
+        
         /// <summary>
         /// Method that can be called from the clients
         /// </summary>
