@@ -6,7 +6,7 @@ namespace SignalRDemo.Hubs
     {
         public override System.Threading.Tasks.Task OnConnected()
         {
-          Clients.Others.MessageIsReceived("Client with ID" + Context.ConnectionId + " joined the chat");
+          Clients.Others.MessageIsReceived("Iemand with ID" + Context.ConnectionId + " joined the chat");
           return base.OnConnected();
         }
 
